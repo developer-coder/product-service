@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    image: product-service:latest
+    container_name: product-application
+    ports:
+      - "4322:4322"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    restart: unless-stopped
